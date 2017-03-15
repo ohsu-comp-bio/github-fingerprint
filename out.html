@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+<script>
+/*
+ * sparkline
+ * https://github.com/shiwano/sparkline
+ *
+ * Copyright (c) 2013 Shogo Iwano
+ * Licensed under the MIT license.
+ */
+
+(function(window) {
+  'use strict';
+
+  var sparkline,
+      ticks = ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'];
+
+  sparkline = function(numbers, options) {
+    options = options || {};
+    var max = typeof options.max === 'number' ? options.max : Math.max.apply(null, numbers),
+        min = typeof options.min === 'number' ? options.min : Math.min.apply(null, numbers),
+        results = [],
+        f, i;
+
+    f = ~~(((max - min) << 8) / (ticks.length - 1));
+    if (f < 1) { f = 1; }
+
+    for (i = 0; i < numbers.length; i++) {
+      results.push(ticks[~~(((numbers[i] - min) << 8) / f)]);
+    }
+
+    return results.join('');
+  };
+
+  if (typeof module === 'object' && typeof module.exports === 'object') {
+    module.exports = sparkline;
+  } else {
+    window.sparkline = sparkline;
+
+    if (typeof define === 'function' && define.amd) {
+      define('sparkline', [], function () { return sparkline; });
+    }
+  }
+})(this);
+</script>
+
+<table>
+  <thead>
+    <th>Repo</th>
+    <th>Description</th>
+    <th>Contributors</th>
+    <th>Languages</th>
+    <th>URL</th>
+  </thead>
+  <tbody>
+  
+    <tr>
+      <td>compbio-galaxy-wrappers</td>
+      <td>OHSU Galaxy wrappers.  May or may not be dockerized.</td>
+      <td><pre>None : jhl667 : 12 total commits
+Jaclyn Smith : jacmarjorie : 26 total commits</pre></td>
+      <td><pre>Perl: 0.04
+R: 0.11
+Python: 0.85</pre></td>
+      <td><a href="https://github.com/ohsu-comp-bio/compbio-galaxy-wrappers">https://github.com/ohsu-comp-bio/compbio-galaxy-wrappers</a></td>
+    </tr>
+  
+    <tr>
+      <td>ga4gh_client</td>
+      <td>GA4GH requests through Galaxy</td>
+      <td><pre>Jaclyn Smith : jacmarjorie : 5 total commits</pre></td>
+      <td><pre>Python: 1.00</pre></td>
+      <td><a href="https://github.com/ohsu-comp-bio/ga4gh_client">https://github.com/ohsu-comp-bio/ga4gh_client</a></td>
+    </tr>
+  
+    <tr>
+      <td>genomics-workflows</td>
+      <td>None</td>
+      <td><pre>None : jhl667 : 7 total commits</pre></td>
+      <td><pre>Shell: 0.35
+Python: 0.65</pre></td>
+      <td><a href="https://github.com/ohsu-comp-bio/genomics-workflows">https://github.com/ohsu-comp-bio/genomics-workflows</a></td>
+    </tr>
+  
+  </tbody>
+</table>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
