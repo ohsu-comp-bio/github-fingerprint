@@ -1,0 +1,19 @@
+baseURL: http://ohsu-comp-bio.github.io/
+languageCode: en-us
+title: OHSU Comp Bio Github
+
+# Theme to use (located in /themes/THEMENAME/)
+theme: "hyde-y"
+
+
+params:
+    # You can use markdown here.
+    brand: "OHSU"
+    topline: "Computational Biology"
+    # footline: "code with <i class='fa fa-heart'></i>"
+
+    # Sidebar position
+    # false, true, "left", "right"
+    sidebar: "left"
+    github: ohsu-comp-bio
+    twitter: ohsucompbio
