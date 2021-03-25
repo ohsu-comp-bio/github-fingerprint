@@ -95,7 +95,7 @@ python-openstackclient==3.6.0
 python-swiftclient==3.2.0
 python-troveclient==2.7.0
 pytz==2016.10
-PyYAML==3.12
+PyYAML==5.4
 pyzmq==16.0.2
 qtconsole==4.2.1
 rdflib==4.2.2
