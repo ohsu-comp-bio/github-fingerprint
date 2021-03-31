@@ -40,7 +40,7 @@ jupyter-console==5.0.0
 jupyter-core==4.2.0
 keystoneauth1==2.16.0
 lockfile==0.12.2
-lxml==3.7.2
+lxml==4.6.3
 MarkupSafe==0.23
 mccabe==0.5.3
 minio==2.0.4
