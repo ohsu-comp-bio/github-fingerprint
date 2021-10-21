@@ -3,7 +3,7 @@ appnope==0.1.0
 argparse2tool==0.4.3.post2
 autopep8==1.2.4
 avro==1.8.1
-Babel==2.3.4
+Babel==2.9.1
 CacheControl==0.11.7
 certifi==2015.4.28
 cffi==1.9.1
