@@ -44,7 +44,7 @@ lxml==3.7.2
 MarkupSafe==0.23
 mccabe==0.5.3
 minio==2.0.4
-mistune==0.7.3
+mistune==2.0.3
 mock==2.0.0
 monotonic==1.2
 msgpack-python==0.4.8
